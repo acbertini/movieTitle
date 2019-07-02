@@ -16,8 +16,10 @@ public class MovieTitle {
 	public static void main(String[] args) throws Exception {
 		
 		MovieTitle http = new MovieTitle();
-		String substr = "spiderman";
-		http.sendGet(substr);
+		for (String valueString : args) {
+			http.sendGet(valueString);
+		}
+		
 	}
 
 	private void sendGet(String substr) throws Exception {
